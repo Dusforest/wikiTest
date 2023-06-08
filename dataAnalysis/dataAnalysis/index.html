@@ -60,6 +60,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -306,10 +311,77 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          数据分析
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         数据分析
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    数据图表展示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    决策树展示
+  </a>
+  
+    <nav class="md-nav" aria-label="决策树展示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    结论1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    结论2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    结论3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -347,6 +419,57 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    数据图表展示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    决策树展示
+  </a>
+  
+    <nav class="md-nav" aria-label="决策树展示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    结论1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    结论2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    结论3
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -361,9 +484,35 @@
                   
 
 
-  <h1>数据分析</h1>
-
-
+<h1 id="_1">数据分析</h1>
+<p>我们通过官方网站获取了当前版本(s8.5)的57位英雄和116个装备的基本数据，并通过python进行了一些数据分析，以下是我们的一些数据挖掘过程和成果——</p>
+<h2 id="_2">数据图表展示</h2>
+<p>通过<a href="https://matplotlib.org/">matplotlib</a>库，我们将数据绘制成图表，由此可以观察数据的总体情况。</p>
+<p>以下是通过部分英雄数据制成的关于图表(按照英雄登场率降序排列)——</p>
+<p><img alt="登场率" src="../img/%E7%99%BB%E5%9C%BA%E7%8E%87.png" /></p>
+<p><center>图1.1 登场率</center></p>
+<p><img alt="前四率" src="../img/%E5%89%8D%E5%9B%9B%E7%8E%87.png" /></p>
+<p><center>图1.2 前四率</center></p>
+<p><img alt="登顶率" src="../img/%E7%99%BB%E9%A1%B6%E7%8E%87.png" /></p>
+<p><center>图1.3 登顶率</center></p>
+<p><img alt="排名" src="../img/%E6%8E%92%E5%90%8D.png" /></p>
+<p><center>图1.4 排名</center></p>
+<h2 id="_3">决策树展示</h2>
+<p>决策树是一种基于树结构的有监督学习算法，用于解决分类和回归问题。它将数据集分成多个小的子集，每个子集对应着决策树上的一个节点，其中每个节点又被进一步的分为更小的子集，直到达到终止条件（如节点数量、深度等）。在分类问题中，决策树会根据每个特征的重要性选择最佳的特征来进行划分，直到将数据集划分为只包含单一类别或满足终止条件为止；在回归问题中，决策树会根据每个特征的重要性选择最佳的特征来进行划分，直到将数据集划分为只包含单一数值或满足终止条件为止。</p>
+<p>我们通过决策树分析了英雄的费用和使用率对登顶率的影响，以下是我们根据输出的决策树进行分析得到的结论——</p>
+<p>注：因为得到的决策树图片较大，网站无法完整显示，这里根据结论显示决策树的部分信息。</p>
+<h3 id="1">结论1</h3>
+<p>五费用英雄中(cost=5)，使用率最高的英雄的登顶率并不是最高。</p>
+<p><img alt="结论1" src="../img/%E7%BB%93%E8%AE%BA1.png" /></p>
+<p><center>图2.1 结论1</center></p>
+<h3 id="2">结论2</h3>
+<p>胜率最低的英雄，使用率不是最低，反而有近50%的使用率。经询问后得知——此英雄是某个打法的核心组成，所以很多玩家会选择他。</p>
+<p><img alt="结论1" src="../img/%E7%BB%93%E8%AE%BA2.png" /></p>
+<p><center>图2.2 结论2</center></p>
+<h3 id="3">结论3</h3>
+<p>三费用英雄(cost=3)胜率普遍较低。</p>
+<p><img alt="结论1" src="../img/%E7%BB%93%E8%AE%BA3.png" /></p>
+<p><center>图2.3 结论3</center></p>
 
 
 
