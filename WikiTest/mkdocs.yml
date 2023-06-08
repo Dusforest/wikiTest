@@ -1,3 +1,17 @@
-site_name: My Docs
+site_name: Menu
 theme:
   name: 'material'
+nav:
+  - Home: index.md
+  - 小小英雄: littleLegend/littleLegendMain.md
+  - 英雄: legend/legend.md
+  - 装备: equip/equip.md
+  - 羁绊:
+      - 特质: solder/speciality.md
+      - 职业: solder/profession.md
+  - 数据分析: dataAnalysis/dataAnalysis.md
+  - 版本资料: versionInfo/versionInfo.md
+
+plugins:
+  - search
+
